@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", system-ui, sans-serif;
+
+  --color-app-bg: var(--color-bg-app);
+  --color-app-card: var(--color-bg-card);
+  --color-app-accordion: var(--color-bg-accordion);
+  --color-app-header-nav: var(--color-bg-header-nav);
+
+  --color-app-text: var(--color-text-main);
+  --color-app-accordion-title: var(--color-text-accordion-title);
+  --color-app-divider: var(--color-divider);
+
+  --radius-app: 8px;
+ 
+  --color-status-selected: var(--status-selected);
+  --color-status-unselected: var(--status-unselected);
+
+  --color-logo-text: var(--logo-text);
+  --color-logo-bg: var(--logo-bg);
+  --color-spacex-text: var(--spacex-text);
+
+  --color-heart-stroke: var(--heart-stroke);
+
+  --color-selected-button-bg-bottom-nav: var(--selected-button-bg-bottom-nav);
+  --color-unselected-button-bg-bottom-nav: var(--unselected-button-bg-bottom-nav);
+
+  --color-unselected-button-text-nav: var(--unselected-button-text-nav);
+  
+  --color-accordion-icon: var(--accordion-icon);
+}
+
+/* Default theme (light) */
+:root {
+  --color-bg-app: #F0F0F0;
+  --color-bg-card: #FFFFFF;
+  --color-bg-accordion: #F1F1F1;
+  --color-bg-header-nav: #FFFFFF
+
+  --color-text-main: #121212; 
+  --color-text-accordion-title: #121212;
+ 
+  --color-divider: #EBE7EF;
+
+  --status-selected: #121212;
+  --status-unselected: #7f7f7f;
+
+  --logo-text: #FFFFFF;
+  --logo-bg: #121212;
+  --spacex-text: #121212;
+
+  --heart-stroke: #121212; 
+
+  --selected-button-bg-bottom-nav: #FFFFFF;
+  --unselected-button-bg-bottom-nav: #F5F5F5;
+
+  --unselected-button-text-nav:#7F7F7F;
+
+  --accordion-icon: #000000;
+}
+
+:root[data-theme="light"] {
+  --color-bg-app: #F0F0F0;
+  --color-bg-card: #FFFFFF;
+  --color-bg-accordion: #F1F1F1;
+  --color-bg-header-nav: #FFFFFF;
+
+  --color-text-main: #121212; 
+  --color-text-accordion-title: #121212;
+
+  --color-divider: #EBE7EF;
+
+  --status-selected: #121212;
+  --status-unselected: #7f7f7f;
+
+  --logo-text: #FFFFFF;
+  --logo-bg: #121212;
+  --spacex-text: #121212;
+
+  --heart-stroke: #121212;  
+
+  --selected-button-bg-bottom-nav: #FFFFFF;
+  --unselected-button-bg-bottom-nav: #F5F5F5;
+
+  --unselected-button-text-nav:#7F7F7F;
+
+  --accordion-icon: #000000;
+}
+
+/* DARK THEME */
+:root[data-theme="dark"] {
+  --color-bg-app: #2A2A2A;
+  --color-bg-card: #333333;
+  --color-bg-accordion: #292929;
+  --color-bg-header-nav: #121212;
+
+  --color-text-main: #FFFFFF;
+  --color-text-accordion-title: #9A9A9A;
+
+  --color-divider: #2C2C2C;
+
+  --status-selected: #ffffff;
+  --status-unselected: #909090;
+
+  --logo-text: #121212;
+  --logo-bg: #FFFFFF;
+  --spacex-text: #FFFFFF;
+
+  --heart-stroke: #FFFFFF;
+
+  --selected-button-bg-bottom-nav: #202020;
+  --unselected-button-bg-bottom-nav: #242424;
+
+  --unselected-button-text-nav:#909090;
+
+
+  --accordion-icon: #ffffff;
+}
+
