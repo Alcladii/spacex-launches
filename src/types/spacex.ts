@@ -46,3 +46,10 @@ export interface SpaceXPaginated<T> {
 }
 
 export type Theme = "light" | "dark";
+
+export type SpaceXQuery = {
+  name?: { $regex: string; $options: string };
+  success?: boolean;
+  upcoming?: boolean;
+  [key: string]: unknown;
+};
