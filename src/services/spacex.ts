@@ -1,4 +1,9 @@
-import { type Launch, type SpaceXPaginated, type StatusFilter } from "../types/spacex";
+import type {
+  Launch,
+  SpaceXPaginated,
+  StatusFilter,
+  SpaceXQuery,
+} from "../types/spacex";
 
 const SPACEX_BASE_URL = "https://api.spacexdata.com";
 
@@ -11,7 +16,7 @@ export interface QueryLaunchesOptions {
 
 function buildLaunchQuery(opts: { name?: string; status?: StatusFilter }) {
   const { name, status = "all" } = opts;
-  const query: Record<string, any> = {};
+  const query: SpaceXQuery = {};
 
   if (name && name.trim().length > 0) {
     query.name = {
@@ -43,12 +48,7 @@ function buildLaunchQuery(opts: { name?: string; status?: StatusFilter }) {
 export async function queryLaunches(
   opts: QueryLaunchesOptions
 ): Promise<SpaceXPaginated<Launch>> {
-  const {
-    name,
-    status = "all",
-    page = 1,
-    limit = 24,
-  } = opts;
+  const { name, status = "all", page = 1, limit = 24 } = opts;
 
   const body = {
     query: buildLaunchQuery({ name, status }),
@@ -107,7 +107,7 @@ export async function getTotalLaunchCount(): Promise<number> {
   const body = {
     query: {},
     options: {
-      limit: 1, 
+      limit: 1,
     },
   };
 
