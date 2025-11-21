@@ -118,3 +118,23 @@
   --accordion-icon: #ffffff;
 }
 
+@keyframes favorite-pop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.25); }
+  70%  { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+@keyframes favorite-unpop {
+  0%   { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.85); opacity: 0.9; }
+}
+
+@utility favorite-pop {
+  animation: favorite-pop 260ms ease-out;
+}
+
+@utility favorite-unpop {
+  animation: favorite-unpop 180ms ease-in;
+}
+
