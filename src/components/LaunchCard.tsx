@@ -56,7 +56,11 @@ export const LaunchCard: React.FC<LaunchCardProps> = ({
           </div>
         </div>
       </div>
-      {open && (
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          open ? "max-h-[2000px] opacity-100 mt-3" : "max-h-0 opacity-0 mt-0"
+        }`}
+      >
         <div className="p-4 rounded-app bg-app-accordion mt-3 pt-3 space-y-4 text-app-text  flex flex-col">
           <div className="flex flex-col">
             <span className="font-semibold text-app-accordion-title">
@@ -155,7 +159,7 @@ export const LaunchCard: React.FC<LaunchCardProps> = ({
             </ul>
           </div>
         </div>
-      )}
+      </div>
       <div className="flex items-center justify-center">
         <button
           type="button"
